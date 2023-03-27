@@ -18,8 +18,6 @@ interface PostHeaderProps {
 }
 
 export function PostHeader({ isLoading, posts }: PostHeaderProps) {
-  const formattedDate = dateFormatter(posts.created_at)
-
   return (
     <PostHeaderContainer>
       {isLoading ? (
@@ -46,7 +44,7 @@ export function PostHeader({ isLoading, posts }: PostHeaderProps) {
                 </span>
                 <span>
                   <FontAwesomeIcon icon={faCalendarDay} />
-                  <p>{formattedDate}</p>
+                  <p>{dateFormatter.format(new Date(posts.created_at))}</p>
                 </span>
                 <span>
                   <FontAwesomeIcon icon={faComment} />

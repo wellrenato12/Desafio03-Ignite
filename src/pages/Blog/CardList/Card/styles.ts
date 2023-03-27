@@ -37,7 +37,7 @@ export const CardContainer = styled(Link)`
     }
 
     p {
-      width: 80px;
+      width: 100px;
     }
   }
 

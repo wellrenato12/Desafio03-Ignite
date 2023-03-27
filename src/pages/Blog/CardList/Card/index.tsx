@@ -7,7 +7,7 @@ interface CardProps {
 }
 
 export function Card({ post }: CardProps) {
-  const formattedDate = dateFormatter(post.created_at)
+  const formattedDate = dateFormatter.format(new Date(post.created_at))
   return (
     <CardContainer to={`/post/${post.number}`}>
       <div>
